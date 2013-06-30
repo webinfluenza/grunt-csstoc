@@ -46,7 +46,7 @@ A string value that is used to do identify TOC entries.
 ### Usage Examples
 
 #### Default Options
-In this example, the PlugIn will read all the `@tocitem` entries and generates the TOC from these entries.
+In this example, the PlugIn will read all the `@tocitem` entries from the CSS file and generates the TOC from these entries.
 
 ```js
 grunt.initConfig( {
