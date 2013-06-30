@@ -1,0 +1,31 @@
+
+.foo {
+    height: 20px
+}
+
+/**
+ * @section 1. Foo
+ **/
+
+/**
+ * this class is awwwwsome
+ */
+.awsomeClass {
+    width: 20px
+}
+
+/**
+ * @section 2. Bar (Test)
+ **/
+
+/**
+ * @section 2.1. Subbar Bar
+ **/
+
+/**
+ * @section 3. Baz
+ **/
+
+.anotherClass {
+    font-weight: bold
+}
