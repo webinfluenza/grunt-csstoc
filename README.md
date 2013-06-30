@@ -37,49 +37,28 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.sectionString
 Type: `String`
-Default value: `',  '`
+Default value: `'section'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+A string value that is used to do identify TOC entries.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the PlugIn will read all the `@tocitem` entries and generates the TOC from these entries.
 
 ```js
-grunt.initConfig({
-  csstoc: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
+grunt.initConfig( {
   csstoc: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      sectionString: 'tocitem'
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/mycss.css': 'src/mycss.css',
     },
   },
-})
+} )
 ```
 
 ## Contributing
