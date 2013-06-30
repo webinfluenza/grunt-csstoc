@@ -1,6 +1,6 @@
 # grunt-csstoc
 
-> Generate table of contents for CSS files
+> Generate table of contents (TOC) for CSS files
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
@@ -59,6 +59,29 @@ grunt.initConfig( {
     },
   },
 } )
+```
+
+#### CSS File
+How the TOC entries should look like:
+```css
+/**
+ * @section 1. Foo
+ **/
+
+.foo {
+    height: 20px
+}
+
+/**
+ * @section 2. Bar
+ **/
+
+/**
+ * @section 2.1 Subentry
+ **/
+.foo .bar {
+    background-color: red
+}
 ```
 
 ## Contributing
