@@ -1,4 +1,4 @@
-grunt-contrib-csstoc
+grunt-csstoc
 ====================
 
 Generate table of contents for CSS files
