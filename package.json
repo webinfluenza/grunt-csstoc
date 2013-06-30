@@ -1,8 +1,8 @@
 {
-  "name": "grunt-contrib-csstoc",
+  "name": "grunt-csstoc",
   "description": "Generate table of contents for CSS files",
   "version": "0.1.0",
-  "homepage": "https://github.com/webinfluenza/grunt-contrib-csstoc",
+  "homepage": "https://github.com/webinfluenza/grunt-csstoc",
   "author": {
     "name": "Benno Mielke",
     "email": "look@webinfluenza.de",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/webinfluenza/grunt-contrib-csstoc.git"
+    "url": "git://github.com/webinfluenza/grunt-csstoc.git"
   },
   "bugs": {
-    "url": "https://github.com/webinfluenza/grunt-contrib-csstoc/issues"
+    "url": "https://github.com/webinfluenza/grunt-csstoc/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/webinfluenza/grunt-contrib-csstoc/blob/master/LICENSE-MIT"
+      "url": "https://github.com/webinfluenza/grunt-csstoc/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",

@@ -1,6 +1,6 @@
 /*
- * grunt-contrib-csstoc
- * https://github.com/webinfluenza/grunt-contrib-csstoc
+ * grunt-csstoc
+ * https://github.com/webinfluenza/grunt-csstoc
  *
  * Copyright (c) 2013 Benno Mielke
  * Licensed under the MIT license.
