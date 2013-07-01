@@ -25,12 +25,14 @@ In your project's Gruntfile, add a section named `csstoc` to the data object pas
 ```js
 grunt.initConfig({
   csstoc: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    dist: {
+      options: {
+        // Task-specific options go here.
+      },
+      your_target: {
+        // Target-specific file lists and/or options go here.
+      },
+    }
   },
 })
 ```
@@ -51,12 +53,14 @@ In this example, the PlugIn will read all the `@tocitem` entries from the CSS fi
 ```js
 grunt.initConfig( {
   csstoc: {
-    options: {
-      sectionString: 'tocitem'
-    },
-    files: {
-      'dest/mycss.css': 'src/mycss.css',
-    },
+    dist: {
+      options: {
+        sectionString: 'tocitem'
+      },
+      files: {
+        'dest/mycss.css': 'src/mycss.css',
+      },
+    }
   },
 } )
 ```
