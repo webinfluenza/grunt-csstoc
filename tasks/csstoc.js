@@ -14,16 +14,17 @@ module.exports = function( grunt ) {
 
         // Merge task-specific and/or target-specific options with these defaults.
             options = this.options( {
-                sectionString: 'section'
+                sectionString: 'section',
+                tocHead: 'Table Of Contents'
             } ),
 
             tocDefines = {
                 eof: '\n', /* no CRLF here, assuming Unix line breaks (LF) */
                 start: '/**',
-                end: '*/',
-                startString: '    @tableofcontents',
+                end: ' */',
+                startString: ' *   ' + options.tocHead,
                 indent: '    ',
-                linePrefix: '       '
+                linePrefix: ' *      '
             },
 
             helper = {
@@ -60,7 +61,7 @@ module.exports = function( grunt ) {
                         // we're creating the head of the TOC here
                         var newFileContent = tocDefines.start + tocDefines.eof + tocDefines.startString + tocDefines.eof;
 
-                        // indent the TOC entry, insert the section and append a newline
+                        // indent the TOC entries, insert the section and append a newline
                         newFileContent += tocDefines.linePrefix + tocArray.join( tocDefines.eof + tocDefines.linePrefix );
                         newFileContent += tocDefines.eof + tocDefines.end + tocDefines.eof;
 

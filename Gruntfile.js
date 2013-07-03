@@ -9,6 +9,8 @@
 'use strict';
 
 module.exports = function( grunt ) {
+    // load all grunt tasks
+    require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
     // Project configuration.
     grunt.initConfig( {
@@ -32,11 +34,23 @@ module.exports = function( grunt ) {
         csstoc: {
             test: {
                 options: {
-                    sectionString: 'section'
+                    sectionString: 'section',
+                    tocHead: 'Table Of Contents'
                 },
                 files: {
                     'tmp/foo.css': 'test/expected/foo.css'
                 }
+            }
+        },
+
+        watch: {
+            csstoc: {
+                files: '<%= jshint.all %>',
+                tasks: ['jshint', 'csstoc']
+            },
+            csstoctest: {
+                files: '<%= jshint.all %>',
+                tasks: ['jshint', 'csstoc', 'nodeunit']
             }
         },
 
@@ -48,11 +62,6 @@ module.exports = function( grunt ) {
 
     // Actually load this plugin's task(s).
     grunt.loadTasks( 'tasks' );
-
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-contrib-clean' );
-    grunt.loadNpmTasks( 'grunt-contrib-nodeunit' );
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.

@@ -1,10 +1,10 @@
 /**
-    @tableofcontents
-       section 1. Foo
-       section 2. Bar (Test)
-       section 2.1. Subbar Bar
-       section 3. Baz
-*/
+ *   Table Of Contents
+ *      section 1. Foo
+ *      section 2. Bar (Test)
+ *      section 2.1. Subbar Bar
+ *      section 3. Baz
+ */
 
 .foo {
     height: 20px
