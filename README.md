@@ -99,5 +99,5 @@ How the TOC entries should look like:
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-* 2013-06-30   v0.1.0   First official release, still **BETA**
 * 2013-07-03   v0.2.0   Included grunt watch task, option for TOC head string
+* 2013-06-30   v0.1.0   First official release, still **BETA**
