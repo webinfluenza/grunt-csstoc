@@ -1,6 +1,6 @@
 # grunt-csstoc
 
-> Generate table of contents (TOC) for CSS files
+> Generate table of contents (TOC) for CSS files (also works with **LESS** and **SASS**)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
@@ -29,9 +29,9 @@ grunt.initConfig({
       options: {
         // Task-specific options go here.
       },
-      your_target: {
-        // Target-specific file lists and/or options go here.
-      },
+      files: {
+        // your files here
+      }
     }
   },
 })
@@ -45,6 +45,12 @@ Default value: `'section'`
 
 A string value that is used to do identify TOC entries.
 
+#### options.tocHead
+Type: `String`
+Default value: `'Table Of Contents'`
+
+A string value that is used as headline for the TOC
+
 ### Usage Examples
 
 #### Default Options
@@ -55,7 +61,8 @@ grunt.initConfig( {
   csstoc: {
     dist: {
       options: {
-        sectionString: 'tocitem'
+        sectionString: 'tocitem',
+        tocHead: 'Table Of Contents'
       },
       files: {
         'dest/mycss.css': 'src/mycss.css',
@@ -93,3 +100,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 * 2013-06-30   v0.1.0   First official release, still **BETA**
+* 2013-07-03   v0.2.0   Included grunt watch task, option for TOC head string
